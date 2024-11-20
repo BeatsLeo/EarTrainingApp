@@ -1,0 +1,10 @@
+#:kivy 2.3.0
+
+<LOGScreen>:
+    BoxLayout:
+        Button:
+            text: 'LOG'
+        Button:
+            text: root.back_text
+            font_name: "NotoSansSC-VF.ttf"
+            on_press: root.manager.current = 'Index'

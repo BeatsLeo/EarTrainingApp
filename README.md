@@ -1,2 +1,2 @@
-# EarTrainingApp(ETA)
-*An app for ear training exercise, which aims to improve your musical ear.*
+# Music Training App(MTA)
+*An app for music training exercise, which aims to enhance your ability to accurately recognize pitch with your ear and to produce correct pitch with your voice.*

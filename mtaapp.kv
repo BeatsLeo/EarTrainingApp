@@ -1,0 +1,40 @@
+#:kivy 2.3.0
+
+<Index>:
+    Label:
+        font_size: 70
+        font_name: "NotoSansSC-VF.ttf"
+        pos_hint: {"center_x": 0.5, "center_y": 0.8}
+        text: root.title
+
+    Button:
+        text: root.ss_text
+        font_name: "NotoSansSC-VF.ttf"
+        size_hint: 0.6, 0.06
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        on_press: root.manager.current = 'SS Screen'
+        
+    Button:
+        text: root.et_text
+        font_name: "NotoSansSC-VF.ttf"
+        size_hint: 0.6, 0.06
+        height: 50
+        pos_hint: {"center_x": 0.5, "center_y": 0.4}
+        on_press: root.manager.current = 'ET Screen'
+
+    Button:
+        text: root.log_text
+        font_name: "NotoSansSC-VF.ttf"
+        size_hint: 0.6, 0.06
+        height: 50
+        pos_hint: {"center_x": 0.5, "center_y": 0.3}
+        on_press: root.manager.current = 'LOG Screen'
+
+    Button:
+        text: root.lang_text
+        font_name: "NotoSansSC-VF.ttf"
+        size_hint: 0.6, 0.06
+        height: 50
+        pos_hint: {"center_x": 0.5, "center_y": 0.2}
+        on_press: app.change_lang()
+        
