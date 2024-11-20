@@ -1,2 +1,2 @@
 # EarTrainingApp(ETA)
-An app for ear training exercise, which aims to improve your musical ear.
+*An app for ear training exercise, which aims to improve your musical ear.*
