@@ -1,2 +1,3 @@
 .buildozer/*
 buildozer.spec
+__pycache__/*
