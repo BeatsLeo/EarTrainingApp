@@ -22,7 +22,7 @@ class BasePopup(Popup):
         # get all variables that end with '_text' and set their value to the corresponding language key
         for var in filter(lambda x: not x.startswith('__'), dir(self)):
             if var.endswith('_text'):
-                lang_name = var.split('_')[0].upper()
+                lang_name = var.rsplit('_', 1)[0].upper()
                 setattr(self, var, lang_map.get(lang_name, 'Not Registered'))
 
 

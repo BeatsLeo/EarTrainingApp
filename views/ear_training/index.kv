@@ -5,12 +5,31 @@
         last_screen: 'Index'
         size_hint: 0.08, 0.08
         pos_hint: {"center_x": 0.04, "center_y": 0.96}
-    BoxLayout:
-        Button:
-            size_hint: 0.2, 0.2
-            text: 'ET'
-            pos_hint: {"center_x": 0.1, "center_y": 0.5}
-        Button:
-            size_hint: 0.2, 0.2
-            text: root.back_text
-            pos_hint: {"center_x": 0.1, "center_y": 0.5}
+    Label:
+        font_size: 40
+        text: root.et_text
+        pos_hint: {"center_x": 0.5, "center_y": 0.9}
+    Label:
+        font_size: 30
+        text: f'{root.score} / {root.total}'
+        pos_hint: {"center_x": 0.5, "center_y": 0.83}
+    Label:
+        font_size: 20
+        halign: 'left'
+        valign: 'center'
+        text_size: self.width-50, None
+        text: root.et_question_text
+        pos_hint: {"center_x": 0.5, "center_y": 0.7}
+        
+    Button:
+        size_hint: 0.25, 0.05
+        text: root.standard_text
+        pos_hint: {"center_x": 0.18, "center_y": 0.5}
+    Button:
+        size_hint: 0.25, 0.05
+        text: root.replay_text
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    Button:
+        size_hint: 0.25, 0.05
+        text: root.submit_text
+        pos_hint: {"center_x": 0.82, "center_y": 0.5}
