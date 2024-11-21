@@ -9,6 +9,13 @@ CONTENT = {
         'SURE': '确 认',
         'CANCEL': '取 消',
         'RETURN': '确 认 返 回 ?',
+        'ET_QUESTION': '请输入你听到的音（第一个音位标准音，标准音不记谱）',
+        'REPLAY': '重 听',
+        'SUBMIT': '提 交',
+        'STANDARD': '标 准',
+        'NEXT': '下 一 题',
+        'FINISH': '完 成',
+        'SCORE': '得 分',
     },
     'en': {
         'TITLE': "  Music \nTraining",
@@ -19,6 +26,13 @@ CONTENT = {
         'BACK': 'back',
         'SURE': 'Confirm',
         'CANCEL': 'Cancel',
-        'RETURN': 'Confirm Return?'
+        'RETURN': 'Confirm Return?',
+        'ET_QUESTION': 'Please enter the sound you heard (first tone is standard tone, do not write notation)',
+        'REPLAY': 'Replay',
+        'SUBMIT': 'Submit',
+        'STANDARD': 'Standard',
+        'NEXT': 'Next',
+        'FINISH': 'Finish',
+        'SCORE': 'Score',
     },
 }
