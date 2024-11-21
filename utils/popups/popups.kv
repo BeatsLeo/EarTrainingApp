@@ -1,0 +1,16 @@
+<ReturnPopup>:
+    title: root.return_text
+    title_align: "center" 
+    size_hint: 0.7, 0.2
+    auto_dismiss: False
+    BoxLayout:
+        Button:
+            size_hint: 0.1, 0.5
+            text: root.sure_text
+            pos_hint: {"center_x": 0.1, "center_y": 0.4}
+            on_release: root.sure_return()
+        Button:
+            size_hint: 0.1, 0.5
+            text: root.cancel_text
+            pos_hint: {"center_x": 0.7, "center_y": 0.4}
+            on_release: root.dismiss()

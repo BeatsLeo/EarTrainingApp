@@ -1,10 +1,16 @@
 #:kivy 2.3.0
 
 <SSScreen>:
+    BackButton:
+        last_screen: 'Index'
+        size_hint: 0.08, 0.08
+        pos_hint: {"center_x": 0.04, "center_y": 0.96}
     BoxLayout:
         Button:
+            size_hint: 0.2, 0.2
             text: 'SS'
+            pos_hint: {"center_x": 0.1, "center_y": 0.5}
         Button:
+            size_hint: 0.2, 0.2
             text: root.back_text
-            font_name: "NotoSansSC-VF.ttf"
-            on_press: root.manager.current = 'Index'
+            pos_hint: {"center_x": 0.1, "center_y": 0.5}

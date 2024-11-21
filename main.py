@@ -1,14 +1,17 @@
 from kivy.app import App
-from kivy.properties import StringProperty
-from views import ETScreen, SSScreen, LOGScreen
-from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.core.window import Window
+from kivy.core.text import LabelBase
+from kivy.properties import StringProperty
+from kivy.uix.screenmanager import ScreenManager
+
 from settings import *
+from utils import BaseScreen
+from views import ETScreen, SSScreen, LOGScreen
 
 Window.size = (300, 600)  # 宽度大于高度
 
-class Index(Screen):
-    title = StringProperty('')
+class Index(BaseScreen):
+    title_text = StringProperty('')
     ss_text = StringProperty('')
     et_text = StringProperty('')
     log_text = StringProperty('')
@@ -17,15 +20,6 @@ class Index(Screen):
     def __init__(self, **kw):
         super().__init__(**kw)
         self.app = App.get_running_app()
-    
-    def refresh(self):
-        lang_map = self.app.content[self.app.lang]
-        
-        self.title = lang_map['TITLE']
-        self.ss_text = lang_map['SS']
-        self.et_text = lang_map['ET']
-        self.log_text = lang_map['LOG']
-        self.lang_text = lang_map['LANG']
 
 
 class MTAApp(App):
@@ -34,7 +28,7 @@ class MTAApp(App):
     
     def build(self):
         # Create the screen manager
-        sm = ScreenManager()
+        self.sm = ScreenManager()
         self.screens = [
             Index(name='Index'),
             ETScreen(name='ET Screen'),
@@ -42,12 +36,12 @@ class MTAApp(App):
             LOGScreen(name='LOG Screen')
         ]
         for screen in self.screens:
-            sm.add_widget(screen)
-        sm.current = 'Index'
+            self.sm.add_widget(screen)
+        self.sm.current = 'Index'
         
         self.refresh()
 
-        return sm
+        return self.sm
 
     def refresh(self):
         for screen in self.screens:
@@ -58,4 +52,5 @@ class MTAApp(App):
         self.refresh()
 
 if __name__ == '__main__':
+    LabelBase.register(name="Roboto", fn_regular="NotoSansSC-VF.ttf")
     MTAApp().run()

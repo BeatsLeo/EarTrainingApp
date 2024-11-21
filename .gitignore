@@ -1,3 +1,4 @@
 .buildozer/*
 buildozer.spec
 __pycache__/*
+test.ipynb

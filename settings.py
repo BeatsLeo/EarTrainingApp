@@ -6,6 +6,9 @@ CONTENT = {
         'LOG': '日 志',
         'LANG': '语言: 简 体 中 文',
         'BACK': '返 回',
+        'SURE': '确 认',
+        'CANCEL': '取 消',
+        'RETURN': '确 认 返 回 ?',
     },
     'en': {
         'TITLE': "  Music \nTraining",
@@ -14,5 +17,8 @@ CONTENT = {
         'LOG': 'LOG',
         'LANG': 'Language: English',
         'BACK': 'back',
+        'SURE': 'Confirm',
+        'CANCEL': 'Cancel',
+        'RETURN': 'Confirm Return?'
     },
 }

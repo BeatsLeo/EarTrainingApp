@@ -1,3 +1,3 @@
-from .ear_training.index import ETScreen
-from .sight_singing.index import SSScreen
-from .log.index import LOGScreen
+from views.ear_training.index import ETScreen
+from views.sight_singing.index import SSScreen
+from views.log.index import LOGScreen
